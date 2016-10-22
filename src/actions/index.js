@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 export const FETCH_ARTICLES = 'FETCH_ARTICLES';
+export const FETCH_VIDEOS = 'FETCH_VIDEOS';
 
 
 /** Due to IBM's transaction limit, it was necessary that we cycle though API keys **/
@@ -16,7 +17,16 @@ const KEY_OF_CHOICE = [API_KEY, API_KEY2, API_KEY3, API_KEY5];
 const RANDOM_KEY = KEY_OF_CHOICE[Math.floor((Math.random() * KEY_OF_CHOICE.length))];
 
 
+//Youtube Search
 
+function videoSearch(term){
+  YTSearch({ key: API_KEY, term: term }, (videos) => {
+    this.setState({ 
+      videos: videos,
+      selectedVideo: videos[0]
+    });
+  });
+}
 
 
 
@@ -44,6 +54,15 @@ export function fetchArticles() {
 
   return {
     type: FETCH_ARTICLES,
+    payload: request
+  }
+}
+
+export function fetchVideos(term){
+  const request = videoSearch(term);
+
+  return {
+    type: FETCH_VIDEOS,
     payload: request
   }
 }

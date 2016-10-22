@@ -22,7 +22,7 @@ class ArticlesIndex extends Component {
   // }
 
   render() {   
-
+    console.log(this.props.articles);
     return (
       <div>
         hello
