@@ -2,6 +2,8 @@
 bundle.js
 npm-debug.log
 
+.env
+
 # IntelliJ
 *.iml
 /.idea
