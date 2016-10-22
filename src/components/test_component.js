@@ -21,8 +21,7 @@ class ArticlesIndex extends Component {
   //   })
   // }
 
-  render() {
-    console.log(this.props.articles);    
+  render() {   
 
     return (
       <div>

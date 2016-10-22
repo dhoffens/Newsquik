@@ -35,9 +35,15 @@ export function fetchArticles() {
 
   const request = axios.get(`https://gateway-a.watsonplatform.net/calls/data/GetNews?outputMode=json&start=now-3m&end=now&count=5&q.enriched.url.enrichedTitle.keywords.keyword.text=trump&return=enriched.url.url,enriched.url.title,enriched.url.text&apikey=${RANDOM_KEY}`);
 
-  return (dispatch) => {
-    request.then(({data}) => {
-      dispatch({ type: FETCH_ARTICLES, payload: data })
-    });
-  };
+  // return (dispatch) => {
+  //   request.then(({data}) => {
+  //     console.log(data);
+  //     dispatch({ type: FETCH_ARTICLES, payload: data })
+  //   });
+  // };
+
+  return {
+    type: FETCH_ARTICLES,
+    payload: request
+  }
 }
