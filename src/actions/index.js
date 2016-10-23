@@ -1,4 +1,5 @@
 import axios from 'axios';
+import YTSearch from 'youtube-api-search';
 
 export const FETCH_ARTICLES = 'FETCH_ARTICLES';
 export const FETCH_VIDEOS = 'FETCH_VIDEOS';
@@ -19,14 +20,18 @@ const RANDOM_KEY = KEY_OF_CHOICE[Math.floor((Math.random() * KEY_OF_CHOICE.lengt
 
 //Youtube Search
 
-function videoSearch(term){
-  YTSearch({ key: API_KEY, term: term }, (videos) => {
-    this.setState({ 
-      videos: videos,
-      selectedVideo: videos[0]
-    });
-  });
-}
+const YOUTUBE_KEY = process.env.YOUTUBE_API_KEY;
+
+// function videos(term) {
+//   YTSearch({ key: YOUTUBE_KEY, term: term }, (videos) => {
+//     console.log(videos);
+//     let videoList = {
+//       type: FETCH_ARTICLES,
+//       payload: videos
+//     }
+//   })
+// }
+
 
 
 
@@ -41,8 +46,6 @@ function videoSearch(term){
 // }
 
 export function fetchArticles() {
-  console.log(KEY_OF_CHOICE.indexOf(RANDOM_KEY));
-
   const request = axios.get(`https://gateway-a.watsonplatform.net/calls/data/GetNews?outputMode=json&start=now-3m&end=now&count=5&q.enriched.url.enrichedTitle.keywords.keyword.text=trump&return=enriched.url.url,enriched.url.title,enriched.url.text&apikey=${RANDOM_KEY}`);
 
   // return (dispatch) => {
@@ -59,8 +62,8 @@ export function fetchArticles() {
 }
 
 export function fetchVideos(term){
-  const request = videoSearch(term);
-
+                           // https://www.googleapis.com/youtube/v3/search?key=%7Byour_key_here%7D&channelId=%7Bchannel_id_here%7D&part=snippet,id&order=date&maxResults=20
+  const request = axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&key=${YOUTUBE_KEY}&q=${term}&type=video&channelId=UCajrNVKvG2xVlVcSr3GcsDA`);
   return {
     type: FETCH_VIDEOS,
     payload: request
