@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { fetchVideos } from '../actions/index';
+import { fetchArticles } from '../actions/index';
 import { bindActionCreators } from 'redux';
 
 
@@ -21,7 +22,8 @@ class SearchBar extends Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    this.props.fetchVideos(this.state.term)
+    this.props.fetchVideos(this.state.term);
+    this.props.fetchArticles(this.state.term);
     this.setState({ term: ''});
   }
 
@@ -47,7 +49,7 @@ class SearchBar extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchVideos }, dispatch);
+  return bindActionCreators({ fetchVideos, fetchArticles }, dispatch);
 }
 
 export default connect (null, mapDispatchToProps) (SearchBar)

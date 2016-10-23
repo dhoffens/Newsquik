@@ -21,38 +21,9 @@ const RANDOM_KEY = KEY_OF_CHOICE[Math.floor((Math.random() * KEY_OF_CHOICE.lengt
 
 const YOUTUBE_KEY = process.env.YOUTUBE_API_KEY;
 
-// function videos(term) {
-//   YTSearch({ key: YOUTUBE_KEY, term: term }, (videos) => {
-//     console.log(videos);
-//     let videoList = {
-//       type: FETCH_ARTICLES,
-//       payload: videos
-//     }
-//   })
-// }
 
-
-
-
-// export function fetchArticles(props) {
-//   const request = axios.post(`https://gateway-a.watsonplatform.net/calls/data/GetNews?outputMode=json&start=now-1d&end=now&count=1&q.enriched.url.title=O[IBM%5EApple]&return=enriched.url.title,enriched.url.entities.entity.text,enriched.url.entities.entity.type&apikey=${API_KEY}`);
-
-//   return (dispatch) => {
-//     request.then(({data}) => {
-//       dispatch({ type: FETCH_ARTICLES, payload: data })
-//     });
-//   };
-// }
-
-export function fetchArticles() {
-  const request = axios.get(`https://gateway-a.watsonplatform.net/calls/data/GetNews?outputMode=json&start=now-3m&end=now&count=5&q.enriched.url.enrichedTitle.keywords.keyword.text=trump&return=enriched.url.url,enriched.url.title,enriched.url.text&apikey=${RANDOM_KEY}`);
-
-  // return (dispatch) => {
-  //   request.then(({data}) => {
-  //     console.log(data);
-  //     dispatch({ type: FETCH_ARTICLES, payload: data })
-  //   });
-  // };
+export function fetchArticles(term) {
+  const request = axios.get(`https://gateway-a.watsonplatform.net/calls/data/GetNews?apikey=${RANDOM_KEY}&return=enriched.url.title,enriched.url.url,enriched.url.text&start=1476489600&end=1477177200&q.enriched.url.cleanedTitle=${term}&count=10&outputMode=json`);
 
   return {
     type: FETCH_ARTICLES,
