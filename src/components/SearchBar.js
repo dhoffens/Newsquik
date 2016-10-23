@@ -25,6 +25,7 @@ class SearchBar extends Component {
     this.setState({ term: ''});
   }
 
+
   render() {
     return (
       <div>

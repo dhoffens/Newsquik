@@ -18,7 +18,6 @@ export default class App extends Component {
   // componentDidUpdate()
 
 
-
   // videoSearch(term) {
   //   this.setState({
   //     // videos: this.props.videos,
@@ -27,16 +26,18 @@ export default class App extends Component {
   // }
 
 
+
+
   render() {
     // const videoSearch = _.debounce((term)=> { this.videoSearch(term) }, 300);
     return (
       <div>
         <NavBar />
         <SearchBar />
-        {/* <VideosIndex /> */}
         <VideoContainer />
-        <ArticlesIndex />
         <Article />
+        {/* <VideosIndex /> */}
+        <ArticlesIndex />
       </div>
     );
   }

@@ -6,9 +6,6 @@ import RelatedVideo from './videoList/RelatedVideo'
 
 
 class VideoList extends Component {
-
-
-
   render() {
     return (
       <div>
@@ -19,8 +16,8 @@ class VideoList extends Component {
   }
 }
 
-function mapStateToProps({ videos }) {
-  return {videos};
-}
+// function mapStateToProps({ videos }) {
+//   return {videos};
+// }
 
-export default connect(mapStateToProps)(VideoList);
+// export default connect(mapStateToProps)(VideoList);
