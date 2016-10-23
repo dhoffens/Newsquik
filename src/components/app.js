@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import ArticlesIndex from './test_component';
-import VideosIndex from './video_container';
 
 import NavBar from './NavBar';
-import Video from './Video';
+import SearchBar from './SearchBar';
+import VideoList from './VideoList';
 import Article from './Article';
 
 
@@ -12,8 +12,9 @@ export default class App extends Component {
     return (
       <div>
         <NavBar />
-        <VideosIndex />
-        <Video />
+        <SearchBar/>
+        {/* <VideosIndex /> */}
+        <VideoList />
         <ArticlesIndex />
         <Article />
       </div>

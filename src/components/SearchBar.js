@@ -1,23 +1,28 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
+import { fetchVideos } from '../actions/index';
+import { bindActionCreators } from 'redux';
 
-export default class SearchInput extends Component {
 
-  constructor(props, context) {
-    super(props, context)
+class SearchBar extends Component {
+
+  constructor(props) {
+    super(props)
     this.state = {
-      inputText: ''
+      term: ''
     }
   }
 
   handleChange(event) {
     this.setState({
-      inputText: event.target.value
+      term: event.target.value
     })
   }
 
   handleSubmit(event) {
     event.preventDefault()
-    this.props.addTodo(this.state.inputText)
+    this.props.fetchVideos(this.state.term)
+    this.setState({ term: ''});
   }
 
   render() {
@@ -27,15 +32,21 @@ export default class SearchInput extends Component {
           <input
             type="text"
             placeholder="Search News"
-            value={this.state.inputText}
+            value={this.state.term}
             onChange={this.handleChange.bind(this)}
           />
           {/* <button onClick={this.handleSubmit.bind(this)}>Submit</button> */}
 
-          <input type="submit" />
+          <button type="submit" className="btn btn-secondary">Submit</button>
         </form>
       </div>
     )
   }
 
 }
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ fetchVideos }, dispatch);
+}
+
+export default connect (null, mapDispatchToProps) (SearchBar)

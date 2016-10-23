@@ -1,5 +1,4 @@
 import axios from 'axios';
-import YTSearch from 'youtube-api-search';
 
 export const FETCH_ARTICLES = 'FETCH_ARTICLES';
 export const FETCH_VIDEOS = 'FETCH_VIDEOS';

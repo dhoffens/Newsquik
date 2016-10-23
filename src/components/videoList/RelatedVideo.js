@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-export default class Video extends Component {
+export default class RelatedVideo extends Component {
   render() {
     return (
       <div>
-        Video here
+        RelatedVideo here
       </div>
     );
   }
