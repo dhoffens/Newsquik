@@ -9,34 +9,10 @@ import _ from 'lodash';
 
 
 class VideoContainer extends Component {
-
-
-  // constructor(props) {
-  //   super(props);
-
-  //   this.state = {
-  //     mainVideo: null,
-  //     videos: []
-  //   };
-
-  // }
-
-  // updateVideos(){
-  //   this.setState({
-  //     videos: this.props.videos,
-  //     mainVideo: this.props.videos
-  //   })
-  // }
-
-
-
-
-
   render() {
     return (
       <div>
         <MainVideo main={this.props.videos} />
-        <RelatedVideo videos={this.props.videos} />
       </div>
     );
   }
