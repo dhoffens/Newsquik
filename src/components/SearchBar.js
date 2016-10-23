@@ -31,16 +31,16 @@ class SearchBar extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit.bind(this)}>
+        <form className="input-group" onSubmit={this.handleSubmit.bind(this)}>
           <input
+            className="form-control"
             type="text"
             placeholder="Search News"
             value={this.state.term}
             onChange={this.handleChange.bind(this)}
           />
-          {/* <button onClick={this.handleSubmit.bind(this)}>Submit</button> */}
-
-          <button type="submit" className="btn btn-secondary">Submit</button>
+          
+          <span className="input-group-btn"><button type="submit" className="btn btn-secondary">Submit</button></span>
         </form>
       </div>
     )

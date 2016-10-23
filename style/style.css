@@ -1,8 +1,91 @@
-* {
-  padding: 0;
-  margin: 0;
+.navbar {
+	width: 100% !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	background: #222 !important;
+	color: #fff !important;
+	z-index: 1000;
+	border-radius: 0;
+	padding-left: 12%;
+	margin-bottom: 20px;
 }
 
-div {
-  border: 1px solid #000;
+.navbar span {
+	font-weight: bold;
+
+}
+
+.searchBar {
+	width: 300px;
+	height: 38px;
+	margin-bottom: 15px !important;
+}
+
+.input-group {
+	margin-bottom: 30px;
+}
+
+.list-article:hover {
+	cursor:pointer;
+	background-color:#ddd;
+
+}
+
+li {
+	list-style-type: none;
+}
+
+.wrapper {
+	display: flex !important;
+	height: 100vh;
+	margin-top: 20px;
+}
+
+.searchForm {
+	position: absolute;
+	right: 30px;
+	margin-bottom: 30px;
+}
+
+.videoContainer {
+	flex: 6 1 0;
+}
+
+.mainVideo {
+	border: 1px solid black;
+	height: 60vh;
+}
+
+.videoList {
+	display: flex;
+	flex-direction: row;	
+	width: 100%;
+}
+
+.relatedVideo {
+	flex: 1 1 0;
+	border: 1px solid black;
+	display: inline-block;
+	height: 20vh;
+	margin: 0;
+}
+
+.video-detail {
+	width: 100% !important;
+	position: relative;
+}
+
+.articlesContainer {
+	flex: 2 1 0;
+	height: 100%;
+}
+
+.articleTitle {
+	border: 1px solid black;
+	height: 10vh;
+}
+
+.articleBody {
+	border: 1px solid black;
+	height: 70vh;
 }

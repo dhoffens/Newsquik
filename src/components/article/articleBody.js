@@ -7,7 +7,7 @@ export default class ArticleBody extends Component {
         <p>
           {this.props.text}
         </p>
-        <a href={this.props.url} />
+        <a href={this.props.url}>Full Article</a>
       </div>
     );
   }

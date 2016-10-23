@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 class ArticlesContainer extends Component {
   render() {
     return (
-      <div >
+      <div className="articlesContainer">
         <Article data={this.props.articles.result} />
       </div>
     );

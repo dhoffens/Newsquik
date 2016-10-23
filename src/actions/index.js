@@ -6,13 +6,17 @@ export const FETCH_VIDEOS = 'FETCH_VIDEOS';
 
 /** Due to IBM's transaction limit, it was necessary that we cycle though API keys **/
 
-const API_KEY = process.env.API_KEY;
-const API_KEY2 = process.env.API_KEY2;
-const API_KEY3 = process.env.API_KEY3;
-const API_KEY4 = process.env.API_KEY4;
-const API_KEY5 = process.env.API_KEY5;
+// const API_KEY = process.env.API_KEY;
+// const API_KEY2 = process.env.API_KEY2;
+// const API_KEY3 = process.env.API_KEY3;
+// const API_KEY4 = process.env.API_KEY4;
+// const API_KEY5 = process.env.API_KEY5;
+// const API_KEY6 = process.env.API_KEY6;
+// const API_KEY7 = process.env.API_KEY7;
+const API_KEY8 = process.env.API_KEY8;
 
-const KEY_OF_CHOICE = [API_KEY, API_KEY2, API_KEY3, API_KEY5];
+
+const KEY_OF_CHOICE = [API_KEY8];
 
 const RANDOM_KEY = KEY_OF_CHOICE[Math.floor((Math.random() * KEY_OF_CHOICE.length))];
 
