@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ArticlesIndex from './test_component';
+import VideosIndex from './video_container';
 
 import NavBar from './NavBar';
 import Video from './Video';
@@ -11,8 +12,9 @@ export default class App extends Component {
     return (
       <div>
         <NavBar />
-        <ArticlesIndex />
+        <VideosIndex />
         <Video />
+        <ArticlesIndex />
         <Article />
       </div>
     );
