@@ -51,7 +51,22 @@ li {
 	flex: 6 1 0;
 }
 
+.video-detail {
+	margin-right: 15px;
+}
+
+.video-detail:hover {
+	box-shadow: -5px 0px 5px 1px #aaaaaa;
+	transition: .3s;
+}
+
+.details {
+	text-align: center;
+	padding: 15px;
+}
+
 .mainVideo {
+
 	border: 1px solid black;
 	height: 60vh;
 }
@@ -89,3 +104,4 @@ li {
 	border: 1px solid black;
 	height: 70vh;
 }
+
