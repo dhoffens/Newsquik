@@ -4,7 +4,9 @@ export default class ArticleTitle extends Component {
   render() {
     return (
       <div>
-        Article Title here
+        <h3>
+          {this.props.title}
+        </h3>
       </div>
     );
   }
