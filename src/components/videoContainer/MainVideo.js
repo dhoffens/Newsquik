@@ -4,7 +4,7 @@ export default class MainVideo extends Component {
   render() {
     return (
       <div>
-        videoContainer.props
+        MainVideo here
       </div>
     );
   }
