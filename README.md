@@ -1,3 +1,12 @@
+##### NewsQuik #####
+####################
+
+Made during NBCUniversal Hackathon by Greg Perlman, Miguel Lozano, Daniel Hoffens, Juvensen Jules
+
+A dynamic news aggregator providing relevant news videos & articles on a single page application using React + Redux. 
+
+Uses IBM Watson AlchemyNews API and a custom YouTube API showing Telemundo news. Made in <24 hours by a team of junior web devs!!! 
+
 # ReduxSimpleStarter
 
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?
